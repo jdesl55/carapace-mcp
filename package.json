@@ -1,14 +1,39 @@
 {
-  "name": "carapace-mcp-server",
+  "name": "carapace-mcp",
   "version": "0.1.0",
-  "private": true,
+  "description": "Armor for your AI agent. Security verification, goal anchoring, drift detection, and session grading for OpenClaw and MCP-compatible agents.",
   "type": "module",
   "main": "dist/index.js",
+  "bin": {
+    "carapace-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist/",
+    "skill/",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc",
     "start": "node dist/index.js",
-    "dev": "tsx src/index.ts"
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "npm run build"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jdesl55/carapace-mcp.git"
+  },
+  "keywords": [
+    "mcp",
+    "security",
+    "ai-agent",
+    "openclaw",
+    "prompt-injection",
+    "drift-detection",
+    "model-context-protocol"
+  ],
+  "author": "jdesl55",
+  "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.12.1",
     "better-sqlite3": "^11.8.1",

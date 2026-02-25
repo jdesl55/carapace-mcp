@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /**
  * CARAPACE MCP SERVER — Armor for your agent 🦞
  *

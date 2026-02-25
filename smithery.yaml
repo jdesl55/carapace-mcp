@@ -1,0 +1,23 @@
+name: carapace-mcp
+description: >
+  Armor for your AI agent. Security verification with rotating HMAC keys,
+  goal anchoring to prevent drift, action logging, and session grading
+  with improvement insights. Local-first, zero cloud dependencies.
+version: 0.1.0
+repository: https://github.com/jdesl55/carapace-mcp
+license: MIT
+tools:
+  - name: carapace_verify
+    description: Security checkpoint — validates actions against user rules, returns pass/block with rotating key
+  - name: carapace_anchor
+    description: Goal journal — returns goals, priorities, constraints and detects drift
+  - name: carapace_log
+    description: Action logger — records agent actions, flags unverified sensitive operations
+  - name: carapace_status
+    description: Security posture — health status, action counts, key timing, drift level
+  - name: carapace_review
+    description: Session grader — analyzes performance, generates scorecard and improvement insights
+startup:
+  command: node
+  args:
+    - dist/index.js
